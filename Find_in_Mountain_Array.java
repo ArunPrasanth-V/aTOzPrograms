@@ -9,17 +9,16 @@
  
 class Solution {
     public int findInMountainArray(int target, MountainArray arr) {
-     int peak=findingPeak(arr,0,arr.length);
-      int index= binarySearch(arr,0,peak, target);
+     int peak=findingPeak(arr,0, arr.length);
+      int index= binarySearch(arr,0, peak, target);
       if(index==-1)
-          index=binarySearch(arr,peak,, target);
+          index=binarySearch(arr, peak, target);
     }
     
-    int findingPeak(int[] arr,int start,int end)
+    int findingPeak(int[] arr, int start, int end)
     {
         while(start<end)
-        {
-            
+         {
             int mid=start+(end-start)/2;
             if(start==end)
                 return start;
@@ -30,7 +29,7 @@ class Solution {
         }
         return -1;
     }
-    int binarySearch(int arr[],int start,int end,int target)
+    int binarySearch(int arr[], int start, int end, int target)
     {
         boolean is
         while(start<end)
